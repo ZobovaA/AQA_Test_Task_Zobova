@@ -1,6 +1,5 @@
 import { Page } from "./page";
 
-
 class LoginPage extends Page {
     get btnLgn() {
         return $(".btn-lg");
@@ -12,10 +11,13 @@ class LoginPage extends Page {
         return $("#password");
     }
 
-    
+    get formError(){
+        return $('.form-signin-alert');
+    }
+
     open() {
         return super.open("login");
     }
 }
 
-export const loginPage = new LoginPage()
+export const loginPage = new LoginPage();
