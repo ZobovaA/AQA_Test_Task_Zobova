@@ -117,7 +117,7 @@ export const config: WebdriverIO.Config = {
         // expectationResultHandler: function(passed, assertion) {
         //     do something
         // }
-    }
+    },
     //
     // =====
     // Hooks
@@ -175,10 +175,10 @@ export const config: WebdriverIO.Config = {
     // beforeSuite: function (suite) {
     // },
     /**
-     * Function to be executed before a test (in Mocha/Jasmine) starts.
-     */
-    // beforeTest: function (test, context) {
-    // },
+    //  * Function to be executed before a test (in Mocha/Jasmine) starts.
+    //  */
+     beforeTest: function (test, context) {
+     },
     /**
      * Hook that gets executed _before_ a hook within the suite starts (e.g. runs before calling
      * beforeEach in Mocha)
