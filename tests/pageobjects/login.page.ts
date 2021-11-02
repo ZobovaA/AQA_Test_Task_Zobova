@@ -4,6 +4,15 @@ class LoginPage extends Page {
     get btnLgn() {
         return $(".btn-lg");
     }
+
+    get logoSidebar() {
+        return $(".sidebar-nav-logo");
+    }
+
+    get logoSignin() {
+        return $(".signin-logo");
+    }
+    
     get inputUsername() {
         return $("#identification");
     }
@@ -17,6 +26,16 @@ class LoginPage extends Page {
 
     open() {
         return super.open("login");
+    }
+
+    async loginFn() {
+        await this.inputUsername.setValue("hr.doctor@hospitalrun.io");
+        await this.inputPassword.setValue("HRt3st12");
+    }
+
+    async loginInvalidFn() {
+        await this.inputUsername.setValue("test");
+        await this.inputPassword.setValue("test");
     }
 }
 

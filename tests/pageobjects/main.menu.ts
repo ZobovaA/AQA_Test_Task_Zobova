@@ -8,9 +8,7 @@
 // 7. Добавить beforeEach в котором всегда делать логаут перед тестом.
 
 class MainMenuPage {
-    get logo() {
-        return $(".sidebar-nav-logo");
-    }
+
 
     get settingsBtn() {
         return $(".settings-trigger");
@@ -24,6 +22,8 @@ class MainMenuPage {
         await this.settingsBtn.click();
         await this.logout.click();
     }
+
+
 }
 
 export const mainMenuPage = new MainMenuPage();

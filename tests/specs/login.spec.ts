@@ -14,8 +14,7 @@ import { mainMenuPage } from '../pageobjects/main.menu';
 describe("Login Page logged in", () => {
     it("should login with valid credentials", async () => {
         await loginPage.open();
-        await loginPage.inputUsername.setValue("hr.doctor@hospitalrun.io");
-        await loginPage.inputPassword.setValue("HRt3st12");
+        await loginPage.loginFn()
         await loginPage.btnLgn.click();
         await expect(patientListPage.panelHeading).toBeExisting();
         await expect(patientListPage.panelHeading).toHaveTextContaining(
@@ -27,8 +26,7 @@ describe("Login Page logged in", () => {
       it("should not login with invalid credentials", async () => {
         await mainMenuPage.logoutFn();
         await loginPage.open();
-        await loginPage.inputUsername.setValue("test");
-        await loginPage.inputPassword.setValue("test");
+        await loginPage.loginInvalidFn()
         await loginPage.btnLgn.click();
         await expect(loginPage.formError).toBeExisting();
         await expect(loginPage.formError).toHaveTextContaining(
