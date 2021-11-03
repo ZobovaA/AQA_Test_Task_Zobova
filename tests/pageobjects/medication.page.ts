@@ -7,7 +7,6 @@ class MedicationPage extends Page {
     get currentTitle() {
         return $(".view-current-title");
     }
-    
 
     get MedicationHeader() {
         return $(".view-current-title");
@@ -29,8 +28,16 @@ class MedicationPage extends Page {
         return $(".test-patient-input .tt-input");
     }
 
+    get visitDropOption() {
+        return $("option=8/11/2021 (Pharmacy)");
+    }
+
     get inputMedication() {
-        return $(".test-medication-input .ember-text-field");
+        return $(".test-medication-input .tt-input");
+    }
+
+    get inputMedicationSug() {
+        return $(".test-medication-input .tt-suggestion");
     }
 
     get inputPrescription() {
@@ -42,13 +49,17 @@ class MedicationPage extends Page {
     }
 
     get inputDate() {
-        return $("#display_prescriptionDate-ember2880");
+        return $(".col-sm-4.col-sm-4 input");
+    }
+
+    get refilsInput() {
+        return $("input[id^=refills]");
     }
 
     get inputQuantity() {
         return $(".test-quantity-input .ember-text-field");
     }
-  
+
     get MedicationAddBtn() {
         return $(".panel-footer .btn-primary");
     }
@@ -56,8 +67,7 @@ class MedicationPage extends Page {
     get CalendarInput() {
         return $(".col-sm-4 .ember-text-field");
     }
-    
-  
+
     open() {
         return super.open("medication");
     }

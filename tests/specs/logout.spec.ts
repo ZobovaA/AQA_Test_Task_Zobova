@@ -12,8 +12,6 @@ describe("User is able to logout ", () => {
     it("logged in with valid credentionals", async () => {
         await loginPage.open();
         await loginPage.loginFn();
-        await loginPage.btnLgn.click();
-        await expect(patientListPage.panelHeading).toBeExisting();
         await expect(patientListPage.panelHeading).toHaveTextContaining(
             "Patient Listing"
         );

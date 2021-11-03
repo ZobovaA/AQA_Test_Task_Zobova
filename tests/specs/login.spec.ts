@@ -15,8 +15,6 @@ describe("Login Page logged in", () => {
     it("should login with valid credentials", async () => {
         await loginPage.open();
         await loginPage.loginFn()
-        await loginPage.btnLgn.click();
-        await expect(patientListPage.panelHeading).toBeExisting();
         await expect(patientListPage.panelHeading).toHaveTextContaining(
             'Patient Listing');
 
