@@ -1,4 +1,5 @@
 import { Page } from "./page";
+import { patientListPage } from "../pageobjects/patient.list.page";
 
 class LoginPage extends Page {
     get btnLgn() {
@@ -31,6 +32,8 @@ class LoginPage extends Page {
     async loginFn() {
         await this.inputUsername.setValue("hr.doctor@hospitalrun.io");
         await this.inputPassword.setValue("HRt3st12");
+        await loginPage.btnLgn.click();
+        await expect(patientListPage.panelHeading).toBeExisting();
     }
 
     async loginInvalidFn() {
