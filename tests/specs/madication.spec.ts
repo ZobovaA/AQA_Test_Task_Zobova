@@ -56,7 +56,7 @@ describe("Request a new medication ", () => {
         await medicationPage.inputPrescription.click();
         await medicationPage.inputQuantity.setValue(getRandom(1, 5));
 
-        await  medicationPage.refilsInput.setValue(getRandom(5, 10)); // TODO - add selector for refills
+        await  medicationPage.refilsInput.setValue(getRandom(5, 10)); 
 
         await $("button=Ok").click();
     });
