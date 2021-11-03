@@ -1,38 +1,44 @@
 import { Page } from "./page";
 class MedicationPage extends Page {
     get NewRqstbtn() {
-        return $(".btn-primary");
+        return $(".btn.btn-primary");
     }
+
+    get currentTitle() {
+        return $(".view-current-title");
+    }
+    
 
     get MedicationHeader() {
         return $(".view-current-title");
     }
 
-    get MedicationSubLinks () {
+    get MedicationSubLinks() {
         return $$(".category-sub-item");
     }
 
-
-
-    get MedicationLink () {
+    get MedicationLink() {
         return $("#ember767");
     }
 
-    
+    get visitDrop() {
+        return $(".test-add-visit select");
+    }
+
     get inputPatient() {
-        return $("#patientTypeAhead-ember2758");
+        return $(".test-patient-input .tt-input");
     }
 
     get inputMedication() {
-        return $("#inventoryItemTypeAheaMedicationSubItemsd-ember2825");
+        return $(".test-medication-input .ember-text-field");
     }
 
     get inputPrescription() {
-        return $("#prescription-ember2857");
+        return $(".test-medication-prescription textarea");
     }
 
     get dropMedication() {
-        return $("#visit-ember2803");
+        return $(".test-add-visit .form-control");
     }
 
     get inputDate() {
@@ -40,20 +46,18 @@ class MedicationPage extends Page {
     }
 
     get inputQuantity() {
-        return $("#quantity-ember2899");
+        return $(".test-quantity-input .ember-text-field");
     }
-    get inputRefils() {
-        return $("#ember2906");
-    }
-
+  
     get MedicationAddBtn() {
-        return $(".btn-primary");
+        return $(".panel-footer .btn-primary");
     }
 
-    get MedicationCancelBtn() {
-        return $(".btn-default");
+    get CalendarInput() {
+        return $(".col-sm-4 .ember-text-field");
     }
-
+    
+  
     open() {
         return super.open("medication");
     }
