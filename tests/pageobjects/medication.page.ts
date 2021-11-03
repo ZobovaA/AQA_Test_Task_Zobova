@@ -68,6 +68,12 @@ class MedicationPage extends Page {
         return $(".col-sm-4 .ember-text-field");
     }
 
+    get btnOk() {
+        return $("button=Ok");
+    }
+
+    
+
     open() {
         return super.open("medication");
     }

@@ -58,6 +58,6 @@ describe("Request a new medication ", () => {
 
         await  medicationPage.refilsInput.setValue(getRandom(5, 10)); 
 
-        await $("button=Ok").click();
+        await medicationPage.btnOk.click();
     });
 });
