@@ -22,7 +22,8 @@
     "url": "https://github.com/webdriverio/jasmine-boilerplate/issues"
   },
   "scripts": {
-    "test": "wdio run wdio.local.conf.ts"
+    "test": "wdio run wdio.local.conf.ts",
+    "test:firefox": "wdio run wdio.firefox.conf.ts"
     },
   "devDependencies": {
     "@wdio/cli": "^7.16.3",
