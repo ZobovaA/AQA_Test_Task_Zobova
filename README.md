@@ -6,8 +6,9 @@ How to run the tests:
                             npm i 
                             npm run test
                                              
-3. To test on Mozilla browser, please install selenium-gecko-driver. Refer the link: https://webdriver.io/docs/driverbinaries/#geckodriver. Upload driver for your OS https://github.com/mozilla/geckodriver/releases. In the terminal: 
+3. To test on Mozilla browser, please install selenium-gecko-driver. Refer the link: https://webdriver.io/docs/driverbinaries/#geckodriver. Upload driver for your OS https://github.com/mozilla/geckodriver/releases. In the terminal:   
 
+                        choco install selenium-gecko-driver
                           ./geckodriver --port 4444
 
 
