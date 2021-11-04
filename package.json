@@ -24,7 +24,7 @@
   "scripts": {
     "test": "wdio run wdio.local.conf.ts",
     "test:firefox": "wdio run wdio.firefox.conf.ts"
-    },
+  },
   "devDependencies": {
     "@wdio/cli": "^7.16.3",
     "@wdio/jasmine-framework": "^7.2.3",
