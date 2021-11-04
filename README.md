@@ -10,9 +10,9 @@ How to run the tests:
 
 3. Please do this command in your terminal to run test in Mozilla Browser: 
 
-                          geckodriver_windows.exe --port 4444 // for Windows
-                          geckodriver_linux --port 4444 // for Linux
-                          geckodriver_macos --port 4444 // for MacOS
+                          ./geckodriver_windows.exe --port 4444 // for Windows
+                          ./geckodriver_linux --port 4444 // for Linux
+                          ./geckodriver_macos --port 4444 // for MacOS
                            npm run test:firefox
 
 
