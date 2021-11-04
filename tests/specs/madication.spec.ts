@@ -1,7 +1,7 @@
 import { loginPage } from "../pageobjects/login.page";
 import { patientListPage } from "../pageobjects/patient.list.page";
 import { mainMenuPage } from "../pageobjects/main.menu";
-import { medicationPage } from "../pageobjects/medication.page";
+import { madicationPage } from "../pageobjects/madication.page";
 
 const getRandom = (min: number, max: number) => {
     min = Math.ceil(min);
@@ -15,49 +15,49 @@ describe("Request a new medication ", () => {
         await loginPage.loginFn();
     });
 
-//     it("clicked to medication section", async () => {
-//         await medicationPage.MedicationLink.click();
-//         await expect(medicationPage.MedicationSubLinks).toBeElementsArrayOfSize(
-//             4
-//         );
-//         await expect(medicationPage.MedicationSubLinks[0]).toHaveTextContaining(
-//             "Requests"
-//         );
-//         await expect(medicationPage.MedicationSubLinks[1]).toHaveTextContaining(
-//             "Completed"
-//         );
-//         await expect(medicationPage.MedicationSubLinks[2]).toHaveTextContaining(
-//             "New Request"
-//         );
-//         await expect(medicationPage.MedicationSubLinks[3]).toHaveTextContaining(
-//             "Return Medication"
-//         );
+    it("clicked to medication section", async () => {
+        await madicationPage.MedicationLink.click();
+        await expect(madicationPage.MedicationSubLinks).toBeElementsArrayOfSize(
+            4
+        );
+        await expect(madicationPage.MedicationSubLinks[0]).toHaveTextContaining(
+            "Requests"
+        );
+        await expect(madicationPage.MedicationSubLinks[1]).toHaveTextContaining(
+            "Completed"
+        );
+        await expect(madicationPage.MedicationSubLinks[2]).toHaveTextContaining(
+            "New Request"
+        );
+        await expect(madicationPage.MedicationSubLinks[3]).toHaveTextContaining(
+            "Return Medication"
+        );
 
-//         await medicationPage.NewRqstbtn.click();
+        await madicationPage.NewRqstbtn.click();
 
-//         await expect(medicationPage.currentTitle).toHaveTextContaining(
-//             "New Medication Request"
-//         );
+        await expect(madicationPage.currentTitle).toHaveTextContaining(
+            "New Medication Request"
+        );
 
-//         await browser.pause(4000);
-//         await medicationPage.inputPatient.setValue("Test - Patient - P00201");
-//         await medicationPage.inputPatient.click(); 
+        await browser.pause(4000);
+        await madicationPage.inputPatient.setValue("Test - Patient - P00201");
+        await madicationPage.inputPatient.click(); 
 
-//         await medicationPage.visitDrop.click();
-//         await medicationPage.visitDropOption.click(); 
-//         await medicationPage.inputMedication.setValue("Pramoxine"); 
-//         await medicationPage.inputMedicationSug.click();
+        await madicationPage.visitDrop.click();
+        await madicationPage.visitDropOption.click(); 
+        await madicationPage.inputMedication.setValue("Pramoxine"); 
+        await madicationPage.inputMedicationSug.click();
 
-//         await medicationPage.inputPrescription.setValue("Testing prescription");
+        await madicationPage.inputPrescription.setValue("Testing prescription");
 
-//         await medicationPage.inputDate.setValue("11/3/2021"); 
+        await madicationPage.inputDate.setValue("11/3/2021"); 
 
-//         await medicationPage.inputPrescription.click();
-//         await medicationPage.inputPrescription.click();
-//         await medicationPage.inputQuantity.setValue(getRandom(1, 5));
+        await madicationPage.inputPrescription.click();
+        await madicationPage.inputPrescription.click();
+        await madicationPage.inputQuantity.setValue(getRandom(1, 5));
 
-//         await  medicationPage.refilsInput.setValue(getRandom(5, 10)); 
-
-//         await medicationPage.btnOk.click();
-//     });
-// });
+        await  madicationPage.refilsInput.setValue(getRandom(5, 10)); 
+        await madicationPage.MedicationAddBtn.click();
+        await madicationPage.btnOk.click();
+    });
+});
